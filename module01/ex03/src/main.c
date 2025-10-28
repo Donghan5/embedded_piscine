@@ -21,20 +21,20 @@ void is_pressed(int num, uint8_t *counter)
 {
     if (num == 2 && (*counter) < MAX_COUNT) 
     {
-        if (!PIN_PRESS(2)) 
+        if (!PIN_PRESS(num)) 
         {
             (*counter)++;
             OCR1A = (*counter) * TEN_PERC;
-            anti_bounce(2);
+            anti_bounce(num);
         }
     }
     else if (num == 4 && (*counter) > MIN_COUNT)
     {
-        if (!PIN_PRESS(4))
+        if (!PIN_PRESS(num))
         {
             (*counter)--;
             OCR1A = (*counter) * TEN_PERC;
-            anti_bounce(4);
+            anti_bounce(num);
         }
     }
     else

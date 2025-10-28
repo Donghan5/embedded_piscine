@@ -1,8 +1,8 @@
 #include <avr/io.h>
 
-#ifndef
-# define SET_MODE(x, num) DDR##x |= (1 << DD##x##num) /* Setting the output mode */
-#endif
+
+#define SET_MODE(x, num) DDR##x |= (1 << DD##x##num) /* Setting the output mode */
+
 
 int main(void)
 {
@@ -16,8 +16,8 @@ int main(void)
     ** WGM11 -> TCCR1A (dataset)
     ** WGM12/WGM13 -> TCCR1B (dataset)
     */
-    TCCR1A |= (1 << WGM11)
-    TCCR1B |= (1 << WGM13) | (1 << WGM12)
+    TCCR1A |= (1 << WGM11);
+    TCCR1B |= (1 << WGM13) | (1 << WGM12);
     
 
     /*
