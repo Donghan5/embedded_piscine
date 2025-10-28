@@ -26,6 +26,7 @@ int main(void)
     DDRB |= (1 << DDB0) | (1 << DDB1) | (1 << DDB2) | (1 << DDB4);   // DDB3 assigned for
     while (1)
     {
+        _delay_ms(20);   // to avoid bound effect
         if (!(PIND & (1 << PIND2)) && count < 15)
         {
             count++;

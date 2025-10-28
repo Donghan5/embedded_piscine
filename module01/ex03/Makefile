@@ -11,7 +11,7 @@ F_CPU = 16000000UL
 
 PROGRAMMER = arduino
 
-# USB port (using ls /dev/tty* to find)
+# USB port (using ls /deb/tty* to find)
 PORT = /dev/ttyUSB0
 
 # Transfer speed
