@@ -12,7 +12,7 @@ int main(void)
     TCCR1B |= ((1 << CS12));    /* Define Scale (256) */
 
     /* 
-    ** Fast mode setting set each wgm to 1
+    ** Fast mode setting set each wgm to 1 (Creation of Wave, NOT CTC mode)
     ** WGM11 -> TCCR1A (dataset)
     ** WGM12/WGM13 -> TCCR1B (dataset)
     */
