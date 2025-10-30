@@ -29,7 +29,7 @@ void uart_init(unsigned int ubrr)
     ** UPM0n bits (Parity) are 0 by default -> No Parity.
     ** USBS0 bit (Stop Bit) is 0 by default -> 1 Stop Bit.
     */
-    UCSR0C = (3 << UCSZ00);  /* Format to 8N1 (N - No parity(error checking), and Data is 8 bits)*/
+    UCSR0C = (3 << UCSZ00);  /* Format to 8N1 (N - No parity(error checking), and Data is 8 bits) Define bits */
 
     /*
     ** UCSR0A - USART Control and Status Register 0 A
